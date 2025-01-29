@@ -1,0 +1,18 @@
+<div class="header">
+  <div class="dropdown">
+    <label for="cars">No. of cards: </label>
+    <input type="number" step="1" name="num_cards" id="num_cards" />
+  </div>
+  <div class="dropdown">
+    <label for="num_columns">Number of columns: </label>
+    <input type="number" step="1" pattern="^[0-9]$" onchange="this.value = parseInt(this.value);" name="num_columns" id="num_columns" />
+  </div>
+</div>
+
+
+<div class="grid">
+@for (card of cards; track card) {
+  <app-card [value]="card"></app-card>
+}
+</div>
+
