@@ -1,11 +1,11 @@
 <div class="header">
   <div class="dropdown">
-    <label for="cars">No. of cards: </label>
-    <input type="number" step="1" name="num_cards" id="num_cards" />
+    <label for="num_cards">No. of cards: </label>
+    <input type="number" step="1" name="num_cards" id="num_cards" [(ngModel)]="numCards" pattern="^[0-9]+$" (ngModelChange)="changeGrid()"/>
   </div>
   <div class="dropdown">
     <label for="num_columns">Number of columns: </label>
-    <input type="number" step="1" pattern="^[0-9]$" onchange="this.value = parseInt(this.value);" name="num_columns" id="num_columns" />
+    <input type="number" step="1"  name="num_columns" id="num_columns" [(ngModel)]="numColumns" pattern="^[0-9]+$" (ngModelChange)="changeGrid()" />
   </div>
 </div>
 
