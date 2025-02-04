@@ -1,17 +1,16 @@
 <div class="header">
-  <div class="dropdown">
-    <label for="num_cards">No. of cards: </label>
-    <input type="number" step="1" name="num_cards" id="num_cards" [(ngModel)]="numCards" pattern="^[0-9]+$" (ngModelChange)="changeGrid()"/>
-  </div>
-  <div class="dropdown">
-    <label for="num_columns">Number of columns: </label>
-    <input type="number" step="1"  name="num_columns" id="num_columns" [(ngModel)]="numColumns" pattern="^[0-9]+$" (ngModelChange)="changeGrid()" />
-  </div>
+  <!-- the dropdowns to choose the number of cards to display and the number of columns to use -->
+  <label for="num_cards">No. of cards: </label>
+  <input type="number" step="1" name="num_cards" id="num_cards" [(ngModel)]="numCards" pattern="^[0-9]+$" value="1" min="1" (ngModelChange)="changeGrid()"/>
+  
+  <label for="num_columns">Number of columns: </label>
+  <input type="number" step="1"  name="num_columns" id="num_columns" [(ngModel)]="numColumns" pattern="^[0-9]+$" value="1" min="1" (ngModelChange)="changeGrid()" />
 </div>
 
 
 <div class="grid">
-@for (card of cards; track card) {
+  <!-- displays the cards themselves -->
+@for (card of cardsArray; track card.id) {
   <app-card [value]="card"></app-card>
 }
 </div>

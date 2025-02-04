@@ -1,7 +1,6 @@
 :root {
     font-size: 16px;
-  --num-cards: 9; //  Not used by CSS but here for completeness
-  --num-columns: 1;
+  --num-columns: 1; //  custom property
 }
 
 .header {
@@ -10,11 +9,9 @@
   margin-bottom: 10rem;
 }
 
-
-
 .grid {
   display: grid;
-  grid-template-columns: repeat(var(--num-columns), 1fr);
+  grid-template-columns: repeat(var(--num-columns), 1fr); //  uses custom property
   gap: 1rem;
 }
 

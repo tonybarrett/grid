@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Card } from '../../models/card.model';
 
 @Component({
   selector: 'app-card',
@@ -8,5 +9,12 @@ import { Component, Input } from '@angular/core';
   styleUrl: './card.component.scss'
 })
 export class CardComponent {
-  @Input() value: number = 99;
+  // all @Input value need a fallback value
+  @Input() value: Card = {
+    id: 1,
+    face: 'Ace',
+    suit: 'Spades'
+  }
+
+  
 }
