@@ -1,14 +1,20 @@
+:root {
+    font-size: 16px;
+  --num-cards: 9; //  Not used by CSS but here for completeness
+  --num-columns: 1;
+}
+
 .header {
   display: flex;
   justify-content: space-around;
   margin-bottom: 10rem;
-  }
+}
 
 
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(var(--num-columns), 1fr);
   gap: 1rem;
 }
 

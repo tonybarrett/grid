@@ -14,16 +14,17 @@ import { FormsModule } from '@angular/forms';
 })
 export class GridComponent {
   cards: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-  numCards: number = 0;
-  numColumns: number = 0;
+  numCards: number = 9;
+  numColumns: number = 1;
 
   ngOnInit():void {}
 
   changeGrid():void {
     this.numCards = Math.trunc(this.numCards);
     this.numColumns = Math.trunc(this.numColumns);
-    console.log('cards: ', this.numCards);
-    console.log('columns: ', this.numColumns);
+    //  update variables in RxJS
+    document.documentElement.style.setProperty('--num-cards', String(this.numCards));
+    document.documentElement.style.setProperty('--num-columns', String(this.numColumns));
   }
 
 
