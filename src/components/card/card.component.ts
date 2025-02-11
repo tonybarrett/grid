@@ -15,6 +15,5 @@ export class CardComponent {
     face: 'Ace',
     suit: 'Spades'
   }
-
   
 }

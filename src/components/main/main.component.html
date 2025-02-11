@@ -9,7 +9,7 @@
 
 
 <div class="grid">
-  <!-- displays the cards themselves -->
+  <!-- displays the cards themselves using CSS custom properties-->
 @for (card of cardsArray; track card.id) {
   <app-card [value]="card"></app-card>
 }
