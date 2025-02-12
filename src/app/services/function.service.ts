@@ -1,7 +1,16 @@
-import { Card } from '../../models/card.model';
+import { Injectable } from '@angular/core';
+import { Card } from '../models/card.model';
 
-export function CreateArray(numCards: number): Card[] {
-    //  produces an array of random cards of the correct number
+@Injectable({
+  providedIn: 'root'
+})
+export class FunctionService {
+  numCards: number = 1;
+
+  constructor() { }
+
+  public createCardArray(numCards: number): Card[] {
+    //  returns an array of random cards of the correct number
     let cardsArray: Card[] = [];
     let suits: string[] = [
       'Hearts',
@@ -41,3 +50,5 @@ export function CreateArray(numCards: number): Card[] {
 
     return cardsArray;
   }
+
+}

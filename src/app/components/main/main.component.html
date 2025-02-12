@@ -10,7 +10,8 @@
 
 <div class="grid">
   <!-- displays the cards themselves using CSS custom properties-->
-@for (card of cardsArray; track card.id) {
+@for (card of cardsArray; track card.id) {  
+  <!--Angular v17 flow control -->
   <app-card [value]="card"></app-card>
 }
 </div>
