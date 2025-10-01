@@ -7,7 +7,7 @@ it ('my first test', () => {
     cy.get('#num_columns').clear();
     cy.get('#num_columns').type('5');
 
-    cy.get('app-card:nth-child(33) #card')
+    cy.get('app-card:last #card')
         .should('be.visible');
 })
 
