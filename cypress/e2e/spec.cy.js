@@ -1,4 +1,4 @@
-it ('my first test', () => {
+it ('are the cards created and displayed', () => {
     cy.visit('/')
     cy.get('#num_cards').click();
     cy.get('#num_cards').clear();
