@@ -50,11 +50,11 @@ export class MainComponent {
     // writing the number of cards to the RxJS store
     this.stateService.updateNumCards(this.numCards);
 
+    //  set custom property/variables in CSS
+
+    document.documentElement.style.setProperty('--num-columns', String(this.numColumns));
     //  create the array of cards
     this.cardsArray = this.functionService.createCardArray(this.numCards);  //  in a service simply to cut down the amount of code in this one
-
-    //  set custom property/variables in CSS
-    document.documentElement.style.setProperty('--num-columns', String(this.numColumns));
   }
 
 }
