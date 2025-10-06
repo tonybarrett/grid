@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CardComponent } from '../card/card.component';
 import { FormsModule } from '@angular/forms';
 import { Card } from '../../models/card.model';
@@ -15,7 +15,7 @@ import { StateService } from '../../services/state.service';
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss'
 })
-export class MainComponent {
+export class MainComponent implements OnInit {
   cardsArray: Card[] = [
     {
       id: 1,
@@ -26,8 +26,8 @@ export class MainComponent {
   numColumns: number = 1;
   numCards: number = 1
   constructor(
-    private functionService: FunctionService,
-    private stateService: StateService
+    private readonly functionService: FunctionService,
+    private readonly stateService: StateService
   ) {}
 
   ngOnInit(): void {
