@@ -1,4 +1,4 @@
-<div class="header">
+<div id="header">
   <!-- the dropdowns to choose the number of cards to display and the number of columns to use -->
   <label for="num_cards">No. of cards: </label>
   <input type="number" step="1" name="num_cards" id="num_cards" data-cy="num_cards" [(ngModel)]="numCards" pattern="^[0-9]+$" value="1" min="1" (ngModelChange)="changeGrid()"/>
@@ -8,10 +8,12 @@
 </div>
 
 
-<div class="grid">
-  <!-- displays the cards themselves using CSS custom properties-->
-@for (card of cardsArray; track card.id) {  
-  <app-card [value]="card"></app-card>
-}
+<div id="grid-wrapper">
+ <div id="grid">
+    <!-- displays the cards themselves using CSS custom properties-->
+    @for (card of cardsArray; track card.id) {  
+      <app-card [value]="card"></app-card>
+    }
+  </div>
 </div>
 

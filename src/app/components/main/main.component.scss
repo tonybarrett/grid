@@ -1,14 +1,20 @@
 
-.header {
+#header {
   display: flex;
   justify-content: space-around;
   margin-top: 2rem;
   margin-bottom: 5rem;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(var(--num-columns), 1fr); //  uses custom property
-  gap: 1rem;
+#grid-wrapper {
+  display: flex;
+  justify-content: center;
+    
+  #grid {
+    display: grid;
+    grid-template-columns: repeat(var(--num-columns), 1fr); //  uses custom property
+    width: 96vw;
+  }
 }
+
 
