@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 
 Basically it displays randomly (as random as JS gets) generated playing cards. You choose the number of cards and the number of columns to display them in.
-It demo's CSS Custom Properties, which when combined with Angular can dynamically change the CSS and therefore the whole UI.
+It demoes CSS Custom Properties, which when combined with Angular can dynamically change the CSS and therefore the whole UI.
 
 The number of cards is held within RxJS (not that it is really needed here) and the number of columns is held in a CSS dynamic variables (they call them 'custom properties' but I feel 'dynamic variables' explains what they do a lot better). Then through the magic of Angular, the screen refreshes quickly.
 
