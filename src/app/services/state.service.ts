@@ -1,3 +1,4 @@
+//TODO: refactor to use Angular signals
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 
@@ -13,6 +14,6 @@ export class StateService {
 
   updateNumCards(newNumCards: number){
     this.numCards.next(newNumCards);
-}
+  }
 
 }

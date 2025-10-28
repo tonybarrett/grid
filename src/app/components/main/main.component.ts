@@ -28,7 +28,9 @@ export class MainComponent implements OnInit {
   constructor(
     private readonly functionService: FunctionService,
     private readonly stateService: StateService
-  ) {}
+  ) {
+
+  }
 
   ngOnInit(): void {
     // Subscribe to numCards$ property of state service to get real time value
