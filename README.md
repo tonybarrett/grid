@@ -10,7 +10,7 @@ The number of cards is held within RxJS (not that it is really needed here) and 
 
 Other uses of Custom Properties would be changing the base site-wide font size (great for accessibly) or even the base colour pallette.
 
-Testing is handled by Cypress. Uses CSS Flex and Grid. Uses RxJS for state management.
+Testing is handled by Cypress (e2e) and Jest (unit). Uses CSS Flex and Grid. Uses RxJS for state management.
 
 
 ## Development server
