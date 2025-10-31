@@ -1,32 +1,43 @@
 <div id="header">
   <!-- the dropdowns to choose the number of cards to display and the number of columns to use -->
   <label for="num_cards">No. of cards: </label>
-  <input type="number" step="1" min="1" name="num_cards" id="num_cards" list="data-quick-list" data-cy="num_cards" [(ngModel)]="numCards" pattern="^[0-9]+$" value="1" min="1" (ngModelChange)="changeGrid()"/>
-  
+  <input
+    type="number"
+    step="1"
+    min="1"
+    name="num_cards"
+    id="num_cards"
+    list="data-quick-list"
+    data-cy="num_cards"
+    [(ngModel)]="numCards"
+    pattern="^[0-9]+$"
+    value="1"
+    min="1"
+    (ngModelChange)="changeGrid()"
+  />
+
   <label for="num_columns">Number of columns: </label>
-  <input type="number" step="1" min="1" name="num_columns" id="num_columns" list="data-quick-list" data-cy="num_columns" [(ngModel)]="numColumns" pattern="^[0-9]+$" value="1" min="1" (ngModelChange)="changeGrid()" />
+  <input
+    type="number"
+    step="1"
+    min="1"
+    name="num_columns"
+    id="num_columns"
+    list="data-quick-list"
+    data-cy="num_columns"
+    [(ngModel)]="numColumns"
+    pattern="^[0-9]+$"
+    value="1"
+    min="1"
+    (ngModelChange)="changeGrid()"
+  />
 </div>
 
 <div id="grid-wrapper">
- <div id="grid">
+  <div id="grid">
     <!-- displays the cards themselves using CSS custom properties-->
-    @for (card of cardsArray; track card.id) {  
-      <app-card [value]="card"></app-card>
+    @for (card of cardsArray; track card.id) {
+    <app-card [value]="card"></app-card>
     }
   </div>
 </div>
-
-<datalist id="data-quick-list">
-  <option value="1"></option>
-  <option value="2"></option>
-  <option value="3"></option>
-  <option value="4"></option>
-  <option value="5"></option>
-  <option value="6"></option>
-  <option value="7"></option>
-  <option value="8"></option>
-  <option value="9"></option>
-  <option value="10"></option>
-</datalist>
-
-
